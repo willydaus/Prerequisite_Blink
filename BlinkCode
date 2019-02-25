@@ -1,0 +1,24 @@
+//Program that blinks an LED to an SOS message.
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+  flash(200); flash(200); flash(200);                     
+  delay(300); 
+  flash(500); flash(500); flash(500);
+  flash(200); flash(200); flash(200);
+  delay(1000);
+}
+
+void blink(int duration) {
+  digitalWrite(ledPin, HIGH);
+  delay(duration);
+  digitalWrite(ledPin, LOW);
+  delay(duration);
+}
+
